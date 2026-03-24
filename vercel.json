@@ -2,5 +2,9 @@
   "buildCommand": "VITE_SKIP_CF_PROXY=1 pnpm run build",
   "outputDirectory": "build/client",
   "installCommand": "pnpm install",
-  "framework": null
+  "framework": null,
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
