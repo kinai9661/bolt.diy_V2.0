@@ -19,7 +19,7 @@ export default defineConfig((config) => {
         },
         protocolImports: true,
       }),
-      config.mode !== 'test' && remixCloudflareDevProxy(),
+      config.mode !== 'test' && !process.env.VITE_SKIP_CF_PROXY && remixCloudflareDevProxy(),
       remixVitePlugin({
         future: {
           v3_fetcherPersist: true,
