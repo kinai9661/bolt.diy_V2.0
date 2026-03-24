@@ -7,6 +7,7 @@ import {
   openaiProvider,
   xaiProvider,
   mistralProvider,
+  blazeaiProvider,
 } from './providers';
 import type { AIProvider } from './providers/types';
 
@@ -20,6 +21,7 @@ const PROVIDERS = {
   openai: openaiProvider,
   xai: xaiProvider,
   mistral: mistralProvider,
+  blazeai: blazeaiProvider,
 } as const;
 
 /**
